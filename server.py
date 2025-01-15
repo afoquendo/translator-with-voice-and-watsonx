@@ -4,6 +4,7 @@ from flask import Flask, render_template, request
 from flask_cors import CORS
 import os
 from worker import speech_to_text, text_to_speech, watsonx_process_message
+import requests
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
